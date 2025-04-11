@@ -3,6 +3,11 @@
 ## 使用
 
 ```shell
+# machinekey value
+grep core.machinekey WebStudio/web.appsettings.config
+# mysql config
+cat WebStudio/web.connections.config
+
 # linux
 # docker cp ./onlyoffice-password-updater onlyoffice-community-server:/root/
 ./onlyoffice-password-updater -h
