@@ -77,6 +77,7 @@ cat WebStudio/web.connections.config
   var bits = sjcl.misc.pbkdf2("11111111", salt, iterations);
   bits = bits.slice(0, size / 32);
   var hash = sjcl.codec.hex.fromBits(bits);
+  console.log("hash:", hash);
   ```
 
 ## 网页密码hash算法
@@ -150,16 +151,12 @@ cat WebStudio/web.connections.config
   }
   
   func hashPassword(password, salt string) string {
-      // 参数需与前端一致
-      iterations := 100000
-      keySize := 256 / 8 // 32字节
-  
       // PBKDF2 哈希
       hashBytes := pbkdf2.Key(
           []byte(password),
           []byte(salt),
-          iterations,
-          keySize,
+          defaultIterations,
+          defaultKeySize,
           sha256.New,
       )
       return hex.EncodeToString(hashBytes)
