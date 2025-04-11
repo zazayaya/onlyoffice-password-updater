@@ -10,15 +10,24 @@ cat WebStudio/web.connections.config
 
 # linux
 # docker cp ./onlyoffice-password-updater onlyoffice-community-server:/root/
+# docker exec -it onlyoffice-community-server bash
 ./onlyoffice-password-updater -h
-./onlyoffice-password-updater --host=onlyoffice-mysql-server --user=onlyoffice_user --password=onlyoffice_pass --machinekey=JCve93aUxzSr
+./onlyoffice-password-updater \
+  --host=onlyoffice-mysql-server \
+  --user=onlyoffice_user \
+  --password=onlyoffice_pass \
+  --machinekey=JCve93aUxzSr
 
 # windows
 ./onlyoffice-password-updater.exe -h
 ./onlyoffice-password-updater.exe --machinekey=JCve93aUxzSr
 
 # 示例：
-# ./onlyoffice-password-updater --host=onlyoffice-mysql-server --user=onlyoffice_user --password=onlyoffice_pass --machinekey=JCve93aUxzSr
+# ./onlyoffice-password-updater \
+#   --host=onlyoffice-mysql-server \
+#   --user=onlyoffice_user \
+#   --password=onlyoffice_pass \
+#   --machinekey=JCve93aUxzSr
 # 
 # 用户列表：
 # ID: 41a54135-15e5-11f0-a6f7-0242ac120004, 姓名: Administrator , 邮箱: admin@local.com
