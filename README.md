@@ -214,13 +214,10 @@ cat WebStudio/web.connections.config
   }
   ```
 
-## 编译使用
+## 编译
 
 ```shell
-go build -o onlyoffice-password-updater main.go 
-GOOS=windows GOARCH=amd64 go build -o onlyoffice-password-updater.exe main.go 
-
-# ./onlyoffice-password-updater --host=onlyoffice-mysql-server --user=onlyoffice_user --password=onlyoffice_pass --machinekey=JCve93aUxzSr
-# ./onlyoffice-password-updater.exe --machinekey=JCve93aUxzSr
+go build -o onlyoffice-password-updater main.go
+GOOS=windows GOARCH=amd64 go build -o onlyoffice-password-updater.exe main.go
 ```
 
